@@ -1,0 +1,268 @@
+:root {
+    --accent: #24B7EF;
+    --accent-soft: rgba(36, 183, 239, .22);
+
+    --bg: #3E3E3E;
+    --card: #4A4A4A;
+
+    --text: #FFFFFF;
+    --muted: #D6D6D6;
+
+    --border: rgba(255, 255, 255, .16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background:
+        radial-gradient(1000px 520px at 10% 10%, rgba(36, 183, 239, .18), transparent 60%),
+        radial-gradient(1000px 520px at 90% 20%, rgba(36, 183, 239, .12), transparent 60%),
+        var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.topbar {
+    margin: 10px 0 14px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .18);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent);
+    font-size: clamp(22px, 3.2vw, 34px);
+    line-height: 1.1;
+}
+
+p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.card {
+    background: rgba(74, 74, 74, .96);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px 0;
+    backdrop-filter: blur(8px);
+}
+
+.card h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.hint {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(36, 183, 239, .12);
+    border: 1px solid rgba(36, 183, 239, .35);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.msg {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+button {
+    border: 0;
+    border-radius: 14px;
+    padding: 12px 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+button.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+button.secondary:hover {
+    background: rgba(36, 183, 239, .12);
+}
+
+/* ===== Inputs responsivos ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 12px;
+    color: var(--muted);
+    display: grid;
+    gap: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #2f2f2f;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+/* ===== Tabela ===== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 14px;
+}
+
+.table th {
+    color: var(--accent);
+    font-weight: 900;
+    background: rgba(0, 0, 0, .14);
+}
+
+/* ===== Badges ===== */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .14);
+    color: var(--text);
+    font-weight: 900;
+}
+
+.badge.accent {
+    border-color: rgba(36, 183, 239, .55);
+    color: var(--accent);
+    background: rgba(36, 183, 239, .14);
+}
+
+.hit {
+    background: var(--accent);
+    color: #003242;
+    border-color: var(--accent);
+}
+
+/* ===== Dezenas ===== */
+.num {
+    display: inline-flex;
+    min-width: 38px;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 12px;
+    margin: 4px 6px 4px 0;
+    border: 1px solid var(--border);
+    background: rgba(0, 0, 0, .22);
+    font-weight: 900;
+}
+
+.num.ok {
+    background: var(--accent);
+    color: #003242;
+    border-color: var(--accent);
+}
+
+.footnote {
+    margin-top: 10px;
+}
+
+.footer {
+    padding: 10px 2px;
+    text-align: center;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 720px) {
+    .container {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    /* Inputs em 3 colunas no celular */
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Tabela com espaçamento menor */
+    .table th,
+    .table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .num {
+        min-width: 34px;
+        padding: 6px 8px;
+        margin: 4px 5px 4px 0;
+    }
+}

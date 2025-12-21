@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PARANOÁ E AMIGOS — Conferidor Mega-Sena</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-badge">PARANOÁ E AMIGOS</div>
+                <h1>Conferidor Mega-Sena</h1>
+                <p>Digite as dezenas do resultado e veja os acertos na hora (parcial ou completo).</p>
+            </div>
+        </header>
+
+        <section class="card">
+            <h2>Resultado</h2>
+            <p class="muted">
+                Pode preencher só 1, 2, 3... dezenas. A conferência acontece automaticamente.
+            </p>
+
+            <div class="grid">
+                <label>1ª <input id="r1" inputmode="numeric" maxlength="2" placeholder="00"></label>
+                <label>2ª <input id="r2" inputmode="numeric" maxlength="2" placeholder="00"></label>
+                <label>3ª <input id="r3" inputmode="numeric" maxlength="2" placeholder="00"></label>
+                <label>4ª <input id="r4" inputmode="numeric" maxlength="2" placeholder="00"></label>
+                <label>5ª <input id="r5" inputmode="numeric" maxlength="2" placeholder="00"></label>
+                <label>6ª <input id="r6" inputmode="numeric" maxlength="2" placeholder="00"></label>
+            </div>
+
+            <div class="actions">
+                <button class="secondary" id="btnLimpar" type="button">Limpar</button>
+            </div>
+
+            <div id="msg" class="msg"></div>
+        </section>
+
+        <section class="card">
+            <div class="card-head">
+                <h2>Jogos cadastrados</h2>
+                <span class="hint">Sena / Quina / Quadra</span>
+            </div>
+
+            <div id="resultado"></div>
+
+            <div class="footnote muted">
+                Dica: números em destaque mostram acertos conforme você digita o resultado.
+            </div>
+        </section>
+
+        <footer class="footer muted">
+            PARANOÁ E AMIGOS • Conferidor Mega-Sena • GitHub Pages
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
